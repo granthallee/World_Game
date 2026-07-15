@@ -1,28 +1,37 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <html>
   <head>
-    <title>My Page</title>
+    <title>World Game</title>
+    <link rel="icon" type="image/png" href="earth_africa.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bulma\css\bulma.css">
     <script src="script.js" defer></script>
   </head>
   <body>
     <div id="header">
       <div>
-        <h1>Welcome to the Country Guessing Game</h1>
+        <h1 class="title">Welcome to the Country Guessing Game</h1>
       </div>
     </div>
-    <div id="gameplay-area">
-      <label>Guess Country Name</label>
-      <input id = "guess-field">
-      <button id="guess-btn">Submit</button>
-      <button id="reset-btn">Reset</button>
+    <div class="panel is-primary">
+      <div class="panel-heading" id="gameplay-area">
+        <label class="">Guess Country Name</label>
+        <input class="input" type="text" id = "guess-field">
+        <button class="button" id="guess-btn">Submit</button>
+        <button class="button" id="reset-btn">Reset</button>
+      </div>
+      <div id="game-info">
+        <p class="panel-block">Country name: <span class="has-text-weight-bold pl" id="secret-country">???</span></p>
+        <p class="panel-block">Country first letter: <span class="has-text-weight-bold" id="first-letter"></span></p>
+        <p class="panel-block">Points: <span class="has-text-weight-bold" id="score">200</span></p>
+        <div class="panel-block">
+          <ul id="hint-list">
+            <li  id="hint-1">Hint #1:</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div id="game-info">
-      <p>Country name: <span id="secret-country">???</span></p>
-      <p>Country first letter: <span id="first-letter"></span></p>
-      <p>Points: <span id="score">200</span></p>
-      <ul id="hint-list">
-        <li id="hint-1">Hint #1:</li>
-      </ul>
-    </div>
+    
   </body>
 </html>
