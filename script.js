@@ -74,7 +74,7 @@ function new_guess(){
       console.log(next_hint)
     }while(used_hints.includes(next_hint)); //tries again if hint is already in the used hints
     used_hints.push(next_hint)
-    num_hints = used_hints.length
+    let num_hints = used_hints.length
     next_hint_item = document.createElement("li");
     next_hint_item.id = "hint-"+num_hints
     next_hint_item.innerHTML = "Hint #" + num_hints + ": " + next_hint 
