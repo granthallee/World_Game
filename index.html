@@ -16,8 +16,11 @@
     </div>
     <div class="panel is-primary">
       <div class="panel-heading" id="gameplay-area">
-        <label class="">Guess Country Name</label>
-        <input class="input" type="text" id = "guess-field">
+        <label for="guess-field" class="">Guess Country Name</label>
+        <input list = "countries" class="input" type="text" id = "guess-field">
+        <datalist id="countries">
+          
+        </datalist>
         <button class="button" id="guess-btn">Submit</button>
         <button class="button" id="reset-btn">Reset</button>
       </div>

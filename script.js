@@ -40,6 +40,11 @@ window.onload = function() {
   document.getElementById("first-letter").innerHTML = letter_hint //updates letter hint in DOM
   secret_country_info =countries[secret_country]; //gets data about secret country 
   secret_country_keys = Object.keys(secret_country_info); //creates list of keys to the country data
+  for (country of secret_country_keys){ //make datalist for countries
+    let optionelem = document.createElement("option");
+    optionelem.value = country;
+    document.getElementById("countries").appendChild(optionelem);
+  }
   let hint_text = document.getElementById("hint-1").innerHTML
   let first_hint = get_next_hint(secret_country_info, secret_country_keys)
   used_hints.push(first_hint)
